@@ -1,9 +1,16 @@
 package main;
 
 public class Atacante implements Jogador {
+    private int numGols;
+    private int numPartidas;
+
+    public Atacante(int numGols, int numPartidas) {
+        this.numGols = numGols;
+        this.numPartidas = numPartidas;
+    }
 
     @Override
-    public float indicaPontuacaoJogador(int numGols, int numPartidas) {
+    public float indicaPontuacaoJogador() {
         return numGols/numPartidas;
     }
     

@@ -42,5 +42,5 @@ public abstract class Time{
         this.jogador = jogador;
     }
 
-    public abstract float calculaScoreTime();
+    public abstract float calculaScoreTime(Jogador atacante, Jogador zagueiro);
 }

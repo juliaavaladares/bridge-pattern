@@ -6,9 +6,10 @@ public class Cruzeiro extends Time {
     }
 
     @Override
-    public float calculaScoreTime() {
-        float pontuacaoAtacantes = this.numeroAtacantes * this.jogador.indicaPontuacaoJogador(3, 8);
-        float pontuacaoZagueiros = this.numeroZagueiros * this.jogador.indicaPontuacaoJogador(10, 5);
+    public float calculaScoreTime(Jogador atacante, Jogador zagueiro) {
+
+        float pontuacaoAtacantes = this.numeroAtacantes * atacante.indicaPontuacaoJogador();
+        float pontuacaoZagueiros = this.numeroZagueiros * zagueiro.indicaPontuacaoJogador();
 
         return pontuacaoAtacantes + pontuacaoZagueiros ;
     }
